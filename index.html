@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="./js/js.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logoArea">
+            <img class="logo" src="./img/LOGO.png">
+        </div>
+        <div class="top">
+            <div class="center">
+                <div class="logIN_Area">
+                    <form>
+                        <label>
+                            <div class="deco">
+                                <div class="icon ac"></div>
+                            </div>
+                            <input class="ac" name="account" type="text" placeholder="アカウント">
+                        </label>
+                        <label>
+                            <div class="deco">
+                                <div class="icon pw"></div>
+                            </div>
+                            <input class="pw" name="password" type="password" placeholder="パスワード">
+                            <p class="fgpw">パスワード紛失</p>
+                        </label>
+                        <button class="login" type="submit">サインイン</button>
+                        <button class="signup" type="button">登録済み</button>
+                    </form>
+                </div>
+                <div class="lang">
+                    <p>日本語<span></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <ul class="center">
+                <li class="active hotgames">
+                    <p>ホーム</p>
+                </li>
+                <li class="sportgame">
+                    <p>スポーツ</p>
+                </li>
+                <li class="livegame">
+                    <p>ライブ</p>
+                </li>
+                <li class="slotgame">
+                    <p>スロット</p>
+                </li>
+                <li class="fishgame">
+                    <p>釣りゲーム</p>
+                </li>
+                <li class="boardgame">
+                    <p>テーブルゲーム</p>
+                </li>
+                <li>
+                    <p>プロモーション</p>
+                </li>
+                <li>
+                    <p>VIPメンバー</p>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="mainWrap">
+        <div class="ad swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="banner" src="./img/ad.png">
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="mq">
+                <div class="title">
+                    <p>最新ニュース</p>
+                </div>
+                <div class="textBox">
+                    <div class="inner">
+                        <p class="content">プロモーション~ライブカジノリベート</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gameType">
+            <ul class="top">
+                <li>
+                   <p>人気</p>
+                   <div class="lideco"></div>
+                </li>
+                <li class="active">
+                   <p>全て</p>
+                   <div class="lideco"></div>
+                </li>
+                <li>
+                   <p>スポーツ</p>
+                   <div class="lideco"></div>
+                </li>
+                <li>
+                   <p>ライブ</p>
+                   <div class="lideco"></div>
+                </li>
+                <li>
+                   <p>スロット</p>
+                   <div class="lideco"></div>
+                </li>
+                <li>
+                   <p>釣りゲーム</p>
+                   <div class="lideco"></div>
+                </li>
+                <li>
+                   <p class="ori">テーブルゲーム</p>
+                   <p class="media">テーブル<br>ゲーム</p>
+                   <div class="lideco"></div>
+                </li>
+            </ul>
+            <div class="midLine">
+            </div>
+            <div class="bottom">
+                <div class="typeContent hot">
+                    <div class="gameBlock sport">
+                        <div class="brandLOGO b36"></div>
+                        <div class="clipBG">
+                            <div class="mainObject b36"></div>
+                        </div>
+                        <div class="toplayer sport">
+                            <p class="gameName">36588 sports</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock live">
+                        <div class="brandLOGO pp"></div>
+                        <div class="clipBG">
+                            <div class="mainObject live pp">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="toplayer live">
+                            <p class="gameName">Pragmatic Play Live</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock live">
+                        <div class="brandLOGO wm"></div>
+                        <div class="clipBG">
+                            <div class="mainObject live wm">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="toplayer live">
+                            <p class="gameName">WM Live</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock live">
+                        <div class="brandLOGO sa"></div>
+                        <div class="clipBG">
+                            <div class="mainObject live sa">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="toplayer live">
+                            <p class="gameName">SA Live</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock fish">
+                        <div class="brandLOGO jili"></div>
+                        <div class="clipBG">
+                            <div class="mainObject jili"></div>
+                        </div>
+                        <div class="toplayer fish">
+                            <p class="gameName">JILI fishing</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock board">
+                        <div class="brandLOGO rela"></div>
+                        <div class="clipBG">
+                            <div class="mainObject rela"></div>
+                        </div>
+                        <div class="toplayer board">
+                            <p class="gameName">RELAX games</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock board">
+                        <span class="rsgbg"></span>
+                        <div class="brandLOGO rsg"></div>
+                        <div class="clipBG">
+                            <div class="mainObject rsg"></div>
+                        </div>
+                        <div class="toplayer board">
+                            <p class="gameName">RSG games</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock board">
+                        <div class="brandLOGO pg"></div>
+                        <div class="clipBG">
+                            <div class="mainObject pg"></div>
+                        </div>
+                        <div class="toplayer board">
+                            <p class="gameName">PG games</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock slot">
+                        <div class="brandLOGO ifun"></div>
+                        <div class="clipBG">
+                            <div class="mainObject ifun">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="toplayer slot">
+                            <p class="gameName">IFUN games</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock slot">
+                        <div class="brandLOGO png"></div>
+                        <div class="clipBG">
+                            <span class="pngbg"></span>
+                            <div class="mainObject png"></div>
+                        </div>
+                        <div class="toplayer slot">
+                            <p class="gameName">PNG games</p>
+                        </div>
+                    </div>
+                    <s></s>
+                    <s></s>
+                    <s></s>
+                </div>
+                <div class="typeContent all display">
+                    <div class="gameBlock sport">
+                        <div class="brandLOGO b36"></div>
+                        <div class="clipBG">
+                            <div class="mainObject b36"></div>
+                        </div>
+                        <div class="toplayer sport">
+                            <p class="gameName">36588 sports</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock live">
+                        <div class="brandLOGO pp"></div>
+                        <div class="clipBG">
+                            <div class="mainObject live pp">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="toplayer live">
+                            <p class="gameName">Pragmatic Play Live</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock live">
+                        <div class="brandLOGO wm"></div>
+                        <div class="clipBG">
+                            <div class="mainObject live wm">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="toplayer live">
+                            <p class="gameName">WM Live</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock live">
+                        <div class="brandLOGO sa"></div>
+                        <div class="clipBG">
+                            <div class="mainObject live sa">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="toplayer live">
+                            <p class="gameName">SA Live</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock fish">
+                        <div class="brandLOGO jili"></div>
+                        <div class="clipBG">
+                            <div class="mainObject jili"></div>
+                        </div>
+                        <div class="toplayer fish">
+                            <p class="gameName">JILI fishing</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock board">
+                        <div class="brandLOGO rela"></div>
+                        <div class="clipBG">
+                            <div class="mainObject rela"></div>
+                        </div>
+                        <div class="toplayer board">
+                            <p class="gameName">RELAX games</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock board">
+                        <span class="rsgbg"></span>
+                        <div class="brandLOGO rsg"></div>
+                        <div class="clipBG">
+                            <div class="mainObject rsg"></div>
+                        </div>
+                        <div class="toplayer board">
+                            <p class="gameName">RSG games</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock board">
+                        <div class="brandLOGO pg"></div>
+                        <div class="clipBG">
+                            <div class="mainObject pg"></div>
+                        </div>
+                        <div class="toplayer board">
+                            <p class="gameName">PG games</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock slot">
+                        <div class="brandLOGO ifun"></div>
+                        <div class="clipBG">
+                            <div class="mainObject ifun">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="toplayer slot">
+                            <p class="gameName">IFUN games</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock slot">
+                        <div class="brandLOGO png"></div>
+                        <div class="clipBG">
+                            <span class="pngbg"></span>
+                            <div class="mainObject png"></div>
+                        </div>
+                        <div class="toplayer slot">
+                            <p class="gameName">PNG games</p>
+                        </div>
+                    </div>
+                    <s></s>
+                    <s></s>
+                    <s></s>
+                </div>
+                <div class="typeContent sport">
+                    <div class="gameBlock sport">
+                        <div class="brandLOGO b36"></div>
+                        <div class="clipBG">
+                            <div class="mainObject b36"></div>
+                        </div>
+                        <div class="toplayer sport">
+                            <p class="gameName">36588 sports</p>
+                        </div>
+                    </div>
+                    <s></s>
+                    <s></s>
+                    <s></s>
+                </div>
+                <div class="typeContent live">
+                    <div class="gameBlock live">
+                        <div class="brandLOGO pp"></div>
+                        <div class="clipBG">
+                            <div class="mainObject live pp">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="toplayer live">
+                            <p class="gameName">Pragmatic Play Live</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock live">
+                        <div class="brandLOGO wm"></div>
+                        <div class="clipBG">
+                            <div class="mainObject live wm">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="toplayer live">
+                            <p class="gameName">WM Live</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock live">
+                        <div class="brandLOGO sa"></div>
+                        <div class="clipBG">
+                            <div class="mainObject live sa">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="toplayer live">
+                            <p class="gameName">SA Live</p>
+                        </div>
+                    </div>
+                    <s></s>
+                    <s></s>
+                    <s></s>
+                </div>
+                <div class="typeContent slot">
+                    <div class="gameBlock slot">
+                        <div class="brandLOGO ifun"></div>
+                        <div class="clipBG">
+                            <div class="mainObject ifun">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="toplayer slot">
+                            <p class="gameName">IFUN games</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock slot">
+                        <div class="brandLOGO png"></div>
+                        <div class="clipBG">
+                            <span class="pngbg"></span>
+                            <div class="mainObject png"></div>
+                        </div>
+                        <div class="toplayer slot">
+                            <p class="gameName">PNG games</p>
+                        </div>
+                    </div>
+                    <s></s>
+                    <s></s>
+                    <s></s>
+                </div>
+                <div class="typeContent fish">
+                    <div class="gameBlock fish">
+                        <div class="brandLOGO jili"></div>
+                        <div class="clipBG">
+                            <div class="mainObject jili"></div>
+                        </div>
+                        <div class="toplayer fish">
+                            <p class="gameName">JILI fishing</p>
+                        </div>
+                    </div>
+                    <s></s>
+                    <s></s>
+                    <s></s>
+                </div>
+                <div class="typeContent board">
+                    <div class="gameBlock board">
+                        <div class="brandLOGO rela"></div>
+                        <div class="clipBG">
+                            <div class="mainObject rela"></div>
+                        </div>
+                        <div class="toplayer board">
+                            <p class="gameName">RELAX games</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock board">
+                        <span class="rsgbg"></span>
+                        <div class="brandLOGO rsg"></div>
+                        <div class="clipBG">
+                            <div class="mainObject rsg"></div>
+                        </div>
+                        <div class="toplayer board">
+                            <p class="gameName">RSG games</p>
+                        </div>
+                    </div>
+                    <div class="gameBlock board">
+                        <div class="brandLOGO pg"></div>
+                        <div class="clipBG">
+                            <div class="mainObject pg"></div>
+                        </div>
+                        <div class="toplayer board">
+                            <p class="gameName">PG games</p>
+                        </div>
+                    </div>
+                    <s></s>
+                    <s></s>
+                    <s></s>
+                </div>
+            </div>
+            <div class="gtswiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide hot all sport">
+                        <div class="gameBlock sport">
+                            <div class="brandLOGO b36"></div>
+                            <div class="clipBG">
+                                <div class="mainObject b36"></div>
+                            </div>
+                            <div class="toplayer sport">
+                                <p class="gameName">36588 sports</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide hot all live">
+                        <div class="gameBlock live">
+                            <div class="brandLOGO pp"></div>
+                            <div class="clipBG">
+                                <div class="mainObject live pp">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="toplayer live">
+                                <p class="gameName">Pragmatic Play Live</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide hot all live">
+                        <div class="gameBlock live">
+                            <div class="brandLOGO wm"></div>
+                            <div class="clipBG">
+                                <div class="mainObject live wm">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="toplayer live">
+                                <p class="gameName">WM Live</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide hot all live">
+                        <div class="gameBlock live">
+                            <div class="brandLOGO sa"></div>
+                            <div class="clipBG">
+                                <div class="mainObject live sa">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="toplayer live">
+                                <p class="gameName">SA Live</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide hot all fish">
+                        <div class="gameBlock fish">
+                            <div class="brandLOGO jili"></div>
+                            <div class="clipBG">
+                                <div class="mainObject jili"></div>
+                            </div>
+                            <div class="toplayer fish">
+                                <p class="gameName">JILI fishing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide hot all board">
+                        <div class="gameBlock board">
+                            <div class="brandLOGO rela"></div>
+                            <div class="clipBG">
+                                <div class="mainObject rela"></div>
+                            </div>
+                            <div class="toplayer board">
+                                <p class="gameName">RELAX games</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide hot all board">
+                        <div class="gameBlock board">
+                            <span class="rsgbg"></span>
+                            <div class="brandLOGO rsg"></div>
+                            <div class="clipBG">
+                                <div class="mainObject rsg"></div>
+                            </div>
+                            <div class="toplayer board">
+                                <p class="gameName">RSG games</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide hot all board">
+                        <div class="gameBlock board">
+                            <div class="brandLOGO pg"></div>
+                            <div class="clipBG">
+                                <div class="mainObject pg"></div>
+                            </div>
+                            <div class="toplayer board">
+                                <p class="gameName">PG games</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide hot all slot">
+                        <div class="gameBlock slot">
+                            <div class="brandLOGO ifun"></div>
+                            <div class="clipBG">
+                                <div class="mainObject ifun">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="toplayer slot">
+                                <p class="gameName">IFUN games</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide hot all slot">
+                        <div class="gameBlock slot">
+                            <div class="brandLOGO png"></div>
+                            <div class="clipBG">
+                                <span class="pngbg"></span>
+                                <div class="mainObject png"></div>
+                            </div>
+                            <div class="toplayer slot">
+                                <p class="gameName">PNG games</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gtswiper-button-prev"></div>
+                <div class="gtswiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="bcenter">
+            <div class="top">
+                <div class="socailBTN">
+                    <button class="line"></button>
+                    <button class="fb "></button>
+                    <button class="twi"></button>
+                    <button class="yt"></button>
+                </div>
+                <div class="csBTN">
+                    <button class="cs">チャット</button>
+                    <button class="gc">
+                        <div class="gcLOGO"></div>
+                    </button>
+                </div>
+            </div>
+            <div class="mid">
+                <ul>
+                    <p class="Bigtitle">最新のお知らせ</p>
+                    <li>
+                        <p>人気</p>
+                    </li>
+                    <li>
+                        <p>ノーマル</p>
+                    </li>
+                </ul>
+                <ul>
+                    <p class="Bigtitle">よくある質問</p>
+                    <li>
+                        <p>プロモーション</p>
+                    </li>
+                    <li>
+                        <p>入出金と振替</p>
+                    </li>
+                    <li>
+                        <p>入出金方法</p>
+                    </li>
+                    <li>
+                        <p>登録とアカウント</p>
+                    </li>
+                    <li>
+                        <p>お問い合わせ</p>
+                    </li>
+                </ul>
+                <ul>
+                    <p class="Bigtitle">当社について</p>
+                    <li>
+                        <p>当社について</p>
+                    </li>
+                    <li>
+                        <p>プライバシーポリシー</p>
+                    </li>
+                    <li>
+                        <p>利用規約</p>
+                    </li>
+                    <li>
+                        <p>責任あるゲーミング</p>
+                    </li>
+                    <li>
+                        <p>プロモーション</p>
+                    </li>
+                </ul>
+                <ul>
+                    <p class="Bigtitle">VIPメンバー</p>
+                    <li>
+                        <p>VIPレベル</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <p class="bTitle">ゲームプロバイダー</p>
+                <div class="partnerBlock">
+                    <div class="clogo net"></div>
+                    <div class="clogo jili"></div>
+                    <div class="clogo sp"></div>
+                    <div class="clogo og"></div>
+                    <div class="clogo qs"></div>
+                    <div class="clogo auxx"></div>
+                    <div class="clogo sa"></div>
+                    <div class="clogo elk"></div>
+                    <div class="clogo bluep"></div>
+                    <div class="clogo evlout"></div>
+                    <div class="clogo tpg"></div>
+                    <div class="clogo rsg"></div>
+                    <div class="clogo ag"></div>
+                    <div class="clogo player"></div>
+                    <div class="clogo ab"></div>
+                    <div class="clogo pls"></div>
+                    <div class="clogo pg"></div>
+                    <div class="clogo png"></div>
+                    <div class="clogo micro"></div>
+                    <div class="clogo pp"></div>
+                    <div class="clogo redrake"></div>
+                    <div class="clogo gh"></div>
+                    <div class="clogo ygg"></div>
+                    <div class="clogo rela"></div>
+                    <div class="clogo rt"></div>
+                    <div class="clogo bng"></div>
+                    <div class="clogo wm"></div>
+                    <div class="clogo b36"></div>
+                    <div class="clogo ifun"></div>
+                    <div class="clogo ely"></div>
+                    <div class="clogo nolimt"></div>
+                    <div class="clogo evo"></div>
+                    <div class="clogo dg"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bg">
+        <span class="gold"></span>
+        <span class="gray"></span>
+    </div>
+</body>
+</html>

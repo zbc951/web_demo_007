@@ -1,0 +1,470 @@
+header {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    // logo
+    .logoArea {
+        width: 445px;
+        height: 445px;
+        display: flex;
+        background: $logoBG;
+        border-radius: 500px;
+        position: absolute;
+        top: -291px;
+        left: -123px;
+        z-index: 1;
+
+       
+
+        .logo {
+            width: 133px;
+            height: 36px;
+            position: absolute;
+            top: 331px;
+            left: 190px;
+            z-index: 5;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+    }
+
+    .top {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding-left: 258px;
+        
+        .center {
+            width: 85%;
+            min-width: 760px;
+            max-width: 1400px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 83px;
+
+            .logIN_Area {
+                width: 100%;
+                height: 100%;
+
+                form {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    label {
+                        margin-right: 12px;
+                        position: relative;
+
+                        .deco {
+                            width: 38px;
+                            height: 35px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: $labelDecoBG;
+                            border-radius: 0 50px 50px 0;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+
+                            .icon {
+                                width: 19px;
+                                height: 21px;
+
+                                &.ac {
+                                    background-position-y: 0%;
+                                }
+
+                                &.pw  {
+                                    background-position-y: 100%;
+                                }
+                            }
+                        }
+
+                        input {
+                            max-width: 188px;
+                            min-width: 141px;
+                            height: 35px;
+                            padding: 0 10px 0 46px;
+                            @include headerInput;
+                        }
+
+                        .fgpw {
+                            color: $remind;
+                            font-size: 14px;
+                            text-decoration: underline;
+                            position: absolute;
+                            bottom: -25px;
+                            left: 25px;
+                            cursor: pointer;
+
+                            &::before {
+                                content:"?";
+                                width: 16px;
+                                height: 16px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 50px;
+                                background: transparent;
+                                border: 1px solid $remind;
+                                position: absolute;
+                                left: -25px;
+                                top: -2px;
+                            }
+
+                            &:hover,&:active,&.active {
+                                color: $mainFont;
+
+                                &::before {
+                                    border-color: $mainFont;
+                                }
+                            }
+                        }
+                    }
+
+                    button {
+                        width: 110px;
+                        height: 35px;
+                        white-space: nowrap;
+                        padding: 0 10px;
+                        margin-right: 12px;
+
+                        &.login{
+                            @include mainBtn;
+                        }
+
+                        &.signup{
+                            @include subBtn;
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+
+            .lang {
+                width: 105px;
+                height: 35px;
+                border-radius: 0 20px 0 0;
+                @include lang;
+                margin-left: 12px;
+                cursor: pointer;
+
+                p {
+                    white-space: nowrap;
+                    margin: 0 10px;
+                    span {
+                        margin-left: 30px;
+                        position: relative;
+    
+                        &::before {
+                            content: "";
+                            width: 8px;
+                            height: 2px;
+                            background: $lang_arrow;
+                            transform: rotate(50deg);
+                            position: absolute;
+                            top: 50%;
+                            left: -15px;
+                        }
+    
+                        &::after {
+                            content: "";
+                            width: 8px;
+                            height: 2px;
+                            background: $lang_arrow;
+                            transform: rotate(-50deg);
+                            position: absolute;
+                            top: 50%;
+                            left: -10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width:1120px) {
+            .center {
+                input {
+                    width: 5%;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding-left: 258px;
+
+        .center {
+            display: flex;
+            align-items: center;
+            padding-left: 83px;
+
+            li {
+                width: auto;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-left: 2px solid $border_01;
+                position: relative;
+                cursor: pointer;
+    
+                p {
+                    color: $mainFont;
+                    font-size: 20px;
+                    font-weight: bold;
+                    white-space: nowrap;
+                    margin: 0 22px;
+                    position: relative;
+                }
+
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(4),
+                &:nth-of-type(5),
+                &:nth-of-type(6) {
+                    p {
+                        &::before {
+                            content: "";
+                            width: 8px;
+                            height: 5px;
+                            position: absolute;
+                            bottom: -20px;
+                            left: 48%;
+                        }
+                    }
+                }
+                &:last-child {
+                    border-right: 2px solid $border_01;
+                }
+
+                &:hover {
+                    &::after {
+                        content: "";
+                        width: 34px;
+                        height: 34px;
+                        background: $nav_ACT;
+                        border-radius: 100px;
+                        position: absolute;
+                        top: -4px;
+                        left: 8px;
+                        z-index: -1;
+                    }
+
+                    p {
+                        &::before,
+                        &::after {
+                            transform: translateY(110%);
+                            transition: ease-in-out 0.3s;
+                        }
+                    }
+                }
+
+                &:active,&.active {
+                    &::before {
+                        content: "";
+                        width: 85%;
+                        height: 99%;
+                        background: $nav_ACT;
+                        border-radius: 35px 35px 0 0;
+                        position: absolute;
+                        bottom: 0px;
+                        z-index: -1;
+                    }
+                }
+            }
+
+            @media only screen and (max-width:1788px) {
+                li {
+                    p {
+                        font-size: 19px;
+                    }
+                }
+            }
+            @media only screen and (max-width:1742px) {
+                li {
+                    p {
+                        font-size: 18.5px;
+                    }
+                }
+            }
+            @media only screen and (max-width:1713px) {
+                li {
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+            @media only screen and (max-width:1692px) {
+                li {
+                    p {
+                        font-size: 17.5px;
+                    } 
+                }
+            }
+            @media only screen and (max-width:1666px) {
+                li {
+                    p {
+                        font-size: 17px;
+                    } 
+                }
+            }
+            @media only screen and (max-width:1000px) {
+                li {
+                    p {
+                        font-size: 14px;
+                        margin: 0 5px;
+                    } 
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1412px) {
+        .bottom {
+            padding-left: 15.5%;
+
+            .center {
+                li {
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1314px) {
+        .bottom {
+        
+            .center {
+                li {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1266px) {
+        .bottom {
+        
+            .center {
+                li {
+                    p {
+                        margin: 0 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1223px) {
+        .bottom {
+        
+            .center {
+                li {
+                    p {
+                        margin: 0 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1125px) {
+        .bottom {
+        
+            .center {
+                li {
+                    p {
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1045px) {
+        .top {
+            padding-left: 22%;
+        }
+        .bottom {
+        
+            .center {
+                li {
+                    p {
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1008px) {
+        .top {
+            padding-left: 22%;
+            .center {
+                .logIN_Area {
+                    form {
+                        button {
+                            width: 98px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .logoArea {
+            left: -206px;
+            .logo {
+                left: 228px;
+            }
+        }
+        .top {
+            padding-left: 235px;
+            .center {
+                padding: 0 8px;
+                justify-content: unset;
+
+                .logIN_Area {
+                    width: 68%;
+                }
+            }
+        }
+        .bottom {
+            height: 65px;
+            padding-left: 219px;
+            .center {
+                font-size: 14px;
+                padding: 0;
+                li {
+                    p {
+                        margin: 0 6px;
+                    }
+                }
+            }
+        }
+    }
+}

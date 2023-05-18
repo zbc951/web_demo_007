@@ -1,0 +1,943 @@
+.mainWrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .ad {
+        width: 100%;
+        max-width: 1400px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        margin-top: 162px;
+        position: relative;
+        z-index: 10;
+
+
+        &.swiper {
+            .swiper-wrapper {
+                height: auto;
+                .swiper-slide {
+                    height: auto !important;
+                    font-size: 0;
+
+                    img {
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            .swiper-button-prev {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 40px 0 0 40px;
+                border-color: transparent transparent transparent $nextPrevBtn;
+                position: absolute;
+                top: unset;
+                bottom: 0px;
+                left: 0px;
+
+                &::before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 0 6px 12px;
+                    border-color: transparent transparent $nextPrev_icon transparent;
+                    position: absolute;
+                    bottom: 6px;
+                    left: -35px;
+                }
+                &::after {
+                    content: "";
+                    width: 8px;
+                    height: 3px;
+                    background: $nextPrev_icon;
+                    position: absolute;
+                    bottom: 6px;
+                    left: -26px;
+                }
+            }
+
+            .swiper-button-next {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 40px 40px;
+                border-color: transparent transparent $nextPrevBtn transparent;
+                position: absolute;
+                top: unset;
+                bottom: 0px;
+                left: unset;
+                right: 0px;
+
+                &::before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 6px 0 0 12px;
+                    border-color: transparent transparent transparent $nextPrev_icon;
+                    position: absolute;
+                    bottom: -34px;
+                    right: 5px;
+                }
+                &::after {
+                    content: "";
+                    width: 8px;
+                    height: 3px;
+                    background: $nextPrev_icon;
+                    position: absolute;
+                    bottom: -34px;
+                    right: 14px;
+                }
+            }
+        }
+
+        .mq {
+            width: 96px;
+            height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            filter: drop-shadow(2px 2px 5px $mqShadaw) drop-shadow(-2px -2px 5px $mqShadaw);
+            transform: translateY(-50%);
+            z-index: 20;
+
+            .title {
+                width: 35px;
+                height: 145px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $mqBG;
+                border-radius: 50px;
+                position: relative;
+                z-index: 10;
+
+                &::before {
+                    content: "";
+                    width: 13px;
+                    height: 13px;
+                    background: $nav_ACT;
+                    border-radius: 50px;
+                    position: absolute;
+                    bottom: -5px;
+                }
+
+                p {
+                    color: $mqTitle;
+                    font-size: 20px;
+                    font-weight: bold;
+                    writing-mode: vertical-lr;
+                    white-space: nowrap;
+                }
+            }
+
+            .textBox {
+                width: 50%;
+                height: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $textBoxBG;
+                border-radius: 30px;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                z-index: 7;
+
+                .inner {
+                    width: 70%;
+                    height: 95%;
+                    display: flex;
+                    justify-content: center;
+                    border: 1px solid $border_02;
+                    border-radius: 30px;
+                    overflow: hidden;
+
+                    .content {
+                        color: $mqTitle;
+                        font-size: 20px;
+                        font-weight: bold;
+                        writing-mode: vertical-lr;
+                        white-space: nowrap;
+                        padding-top: 20px;
+                        animation: mqText 6s linear infinite;
+
+                        @keyframes mqText {
+                            0% {
+                                transform: translateY(150%);
+                            }
+                            100% {
+                                transform: translateY(-130%);
+                            }
+                        }
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    width: 31px;
+                    height: 73px;
+                    background: $mqDeco;
+                    border-radius: 50px;
+                    position: absolute;
+                    bottom: -22px;
+                    right: -15px;
+                    z-index: 7;
+                }
+
+                &::after {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    background: $mqDeco;
+                    border-radius: 30px;
+                    position: absolute;
+                    bottom: 46px;
+                    right: -27px;
+                }
+            }
+        }
+    }
+
+    .gameType {
+        width: 75%;
+        max-width: 1400px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+
+        .top {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 35px 0;
+            z-index: 10;
+
+            li {
+                width: 11.072%;
+                height: 0;
+                padding-top: 9.799%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-position-y: 0%;
+                margin-right: 18px;
+                transition: transform 0.3s;
+                position: relative;
+                cursor: pointer;
+
+                p {
+                    color: $gameType_Font;
+                    font-size: 18px;
+                    font-weight: bold;
+                    white-space: nowrap;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    &.media {
+                        display: none;
+                        text-align: center;
+                    }
+                }
+
+                .lideco {
+                    width: 7.9%;
+                    height: 0;
+                    padding-top: 10%;
+                    // width: 19px;
+                    // height: 24px;
+                    position: absolute;
+                    bottom: -12px;
+                    left: 50%;
+                    top: 150px;
+                    transform: translateX(-50%);
+                    opacity: 0;
+                }
+
+                &:hover {
+                    background-position-y: 100%;
+                    transform: translateY(-10%);
+
+                    p {
+                        color: $mainFont;
+                    }
+                }
+
+                &:active,&.active {
+                    background-position-y: 100%;
+                    transform: translateY(-10%);
+
+                    p {
+                        color: $mainFont;
+                    }
+
+                    .lideco {
+                        opacity: 1;
+                        transition: 0.3s all;
+                    }
+                }
+            }
+        }
+
+        .midLine {
+            width: 100%;
+            height: 2px;
+            background: $border_03;
+            position: relative;
+
+            .fakedeco {
+                width: 0.90%;
+                height: 0;
+                padding-top: 0.99%;
+                position: absolute;
+                top: -12px;
+                left: 337px;
+            }
+
+            .lideco {
+                width: 0.90%;
+                height: 0;
+                padding-top: 0%;
+                position: absolute;
+                top: -12px;
+                left: 337px;
+                transform: translateY(1%);
+                transition: 0.05s ease-in;
+                opacity: 0;
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            height: auto;
+            display: flex;
+            overflow: hidden;
+            padding: 4% 0;
+
+            .typeContent {
+                display: none;
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                &.hot {
+                    display: none;
+
+                    &.display {
+                        display: flex;
+                    }
+                }
+
+                &.all {
+                    display: none;
+
+                    &.display {
+                        display: flex;
+                    }
+                }
+
+                &.sport {
+                    display: none;
+
+                    &.display {
+                        display: flex;
+                    }
+                }
+
+                &.live {
+                    display: none;
+
+                    &.display {
+                        display: flex;
+                    }
+                }
+
+                &.fish {
+                    display: none;
+
+                    &.display {
+                        display: flex;
+                    }
+                }
+
+                &.slot {
+                    display: none;
+
+                    &.display {
+                        display: flex;
+                    }
+                }
+
+                &.board {
+                    display: none;
+
+                    &.display {
+                        display: flex;
+                    }
+                }
+
+                .gameBlock {
+                    width: 238px;
+                    height: 434px;
+                    margin: 0 15px 20px;
+                    position: relative;
+                    z-index: 10;
+                    cursor: pointer;
+
+                    &.board {
+                        .rsgbg {
+                            width: 250px;
+                            height: 390px;
+                            position: absolute;
+                            z-index: 12;
+                        }
+                    }
+                    .brandLOGO {
+                        width: 69px;
+                        height: 30px;
+                        position: absolute;
+                        top: 58px;
+                        left: 50%;
+                        background-position-y: 100%;
+                        transform: translateX(-50%);
+
+                        &.b36 {
+                            height: 25px;
+                        }
+                        &.pp {
+                            width: 73px;
+                            height: 33px;
+                            top: 50px;
+                        }
+                        &.wm {
+                            width: 34px;
+                            height: 36px;
+                            top: 53px;
+                        }
+                        &.sa {
+                            width: 72px;
+                            height: 26px;
+                            top: 58px;
+                        }
+                        &.jili {
+                            width: 57px;
+                            height: 22px;
+                            top: 61px;
+                        }
+                        &.rsg {
+                            width: 51px;
+                            height: 30px;
+                        }
+                        &.pg {
+                            width: 68px;
+                            height: 17px;
+                            top: 64px;
+                        }
+                        &.ifun {
+                            width: 83px;
+                            height: 25px;
+                        }
+                        &.png {
+                            width: 82px;
+                            height: 23px;
+                        }
+                    }
+
+                    .clipBG {
+                        width: 100%;
+                        height: 79%;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 15px;
+
+                        .pngbg {
+                            width: 250px;
+                            height: 390px;
+                            position: absolute;
+                            z-index: 12;
+                        }
+
+                        .mainObject {
+                            width: 100%;
+                            height: 390px;
+                            position: relative;
+                            z-index: 15;
+
+                            span {
+                                width: 250px;
+                                height: 390px;
+                                position: absolute;
+                                bottom: 20px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                z-index: 17;
+                            }
+                        }
+                    }
+
+                    .toplayer {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        z-index: 20;
+                        overflow: hidden;
+
+                        p {
+                            color: $gameNAME;
+                            font-size: 17px;
+                            font-weight: bold;
+                            white-space: nowrap;
+                            position: absolute;
+                            bottom: 47px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                    &:hover,&:active,&.active {
+                        .rsgbg {
+                            animation: shake 1s ease-in infinite reverse;
+                        }
+                        .clipBG {
+                            .pngbg {
+                                animation: zoomI 1s ease-in infinite reverse;
+                            }
+
+                            .mainObject {
+                                animation: move 1.3s ease-in-out 0s infinite;
+
+                                span {
+                                    animation: liveD 1.6s ease-in-out 0s infinite;
+                                }
+                            }
+                        }
+                        &.slot {
+                            .mainObject {
+                                span {
+                                    animation: ifunD 1.6s ease-in-out 0s infinite;
+                                }
+                            }
+                        }
+                    }
+                    @keyframes move {
+                        0% {
+                            transform: skew(2deg) translateY(0);
+                        }
+                        25% {
+                            transform: skew(0) translateY(3%);
+                        }
+                        75% {
+                            transform: skew(-2deg) translateY(0);
+                        }
+                        100% {
+                            transform: skew(0deg) translateY(0);
+                        }
+                    }
+                    @keyframes zoomI {
+                        0% {
+                            transform: scale(1.11);
+                        }
+                        100% {
+                            transform: scale(1);
+                        }
+                    }
+                    @keyframes shake {
+                        0% {
+                            transform: rotate(2deg);
+                        }
+                        50% {
+                            transform: rotate(-2deg);
+                        }
+                        100% {
+                            transform: rotate(0deg);
+                        }
+                    }
+                    @keyframes liveD {
+                        0% {
+                            transform: rotateZ(-20deg) translate(-50%,0%);
+                        }
+                        50% {
+                            transform: rotateZ(-10deg) translate(-90%,0%);
+                        }
+                        100% {
+                            transform: rotateZ(0deg) translate(-50%,-0%);
+                        }
+                    }
+                    @keyframes ifunD {
+                        0% {
+                            transform: rotateZ(0deg) translate(-50%,0%);
+                        }
+                        50% {
+                            transform: rotateZ(-10deg) translate(-50%,0%);
+                        }
+                        100% {
+                            transform: rotateZ(0deg) translate(-50%,-0%);
+                        }
+                    }
+                }
+
+                s {
+                    width: 250px;
+                    margin: 0 15px;
+                }
+            }
+        }
+
+        .gtswiper {
+            width: 100%;
+            height: auto;
+            // display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            
+            .swiper-wrapper {
+
+                .swiper-slide {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    overflow: hidden;
+                    padding: 4% 0;
+
+                    &.hot {
+                        display: none;
+    
+                        &.display {
+                            display: flex;
+                        }
+                    }
+    
+                    &.all {
+                        display: none;
+    
+                        &.display {
+                            display: flex;
+                        }
+                    }
+    
+                    &.sport {
+                        display: none;
+    
+                        &.display {
+                            display: flex;
+                        }
+                    }
+    
+                    &.live {
+                        display: none;
+    
+                        &.display {
+                            display: flex;
+                        }
+                    }
+    
+                    &.fish {
+                        display: none;
+    
+                        &.display {
+                            display: flex;
+                        }
+                    }
+    
+                    &.slot {
+                        display: none;
+    
+                        &.display {
+                            display: flex;
+                        }
+                    }
+    
+                    &.board {
+                        display: none;
+    
+                        &.display {
+                            display: flex;
+                        }
+                    }
+        
+                    .gameBlock {
+                        width: 180px;
+                        height: 290px;
+                        // margin: 0 15px 20px;
+                        position: relative;
+                        z-index: 10;
+                        cursor: pointer;
+    
+                        &.board {
+                            .rsgbg {
+                                width: 250px;
+                                height: 390px;
+                                position: absolute;
+                                z-index: 12;
+                            }
+                        }
+                        .brandLOGO {
+                            width: 69px;
+                            height: 30px;
+                            position: absolute;
+                            top: 28px;
+                            left: 50%;
+                            background-position-y: 100%;
+                            transform: translateX(-50%);
+    
+                            &.b36 {
+                                height: 25px;
+                            }
+                            &.pp {
+                                width: 73px;
+                                height: 33px;
+                                top: 16px;
+                            }
+                            &.wm {
+                                width: 34px;
+                                height: 36px;
+                                top: 20px;
+                            }
+                            &.sa {
+                                width: 72px;
+                                height: 26px;
+                                top: 27px;
+                            }
+                            &.jili {
+                                width: 57px;
+                                height: 22px;
+                                top: 27px;
+                            }
+                            &.rela {
+                                top: 21px;
+                            }
+                            &.rsg {
+                                width: 51px;
+                                height: 30px;
+                                top: 20px;
+                            }
+                            &.pg {
+                                width: 68px;
+                                height: 17px;
+                                top: 30px;
+                            }
+                            &.ifun {
+                                width: 69px;
+                                height: 20px;
+                                top: 26px;
+                            }
+                            &.png {
+                                width: 60px;
+                                height: 17px;
+                                top: 27px;
+                            }
+                        }
+    
+                        .clipBG {
+                            width: 100%;
+                            height: 79%;
+                            overflow: hidden;
+                            position: absolute;
+                            top: 15px;
+    
+                            .pngbg {
+                                width: 250px;
+                                height: 390px;
+                                position: absolute;
+                                z-index: 12;
+                            }
+    
+                            .mainObject {
+                                width: 100%;
+                                height: 390px;
+                                position: relative;
+                                z-index: 15;
+    
+                                span {
+                                    width: 250px;
+                                    height: 390px;
+                                    position: absolute;
+                                    bottom: 20px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    z-index: 17;
+                                }
+                            }
+                        }
+    
+                        .toplayer {
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            z-index: 20;
+                            overflow: hidden;
+    
+                            p {
+                                color: $gameNAME;
+                                font-size: 17px;
+                                font-weight: bold;
+                                white-space: nowrap;
+                                position: absolute;
+                                bottom: 47px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                        }
+                        &:hover,&:active,&.active {
+                            .rsgbg {
+                                animation: shake 1s ease-in infinite reverse;
+                            }
+                            .clipBG {
+                                .pngbg {
+                                    animation: zoomI 1s ease-in infinite reverse;
+                                }
+    
+                                .mainObject {
+                                    animation: move 1.3s ease-in-out 0s infinite;
+    
+                                    span {
+                                        animation: liveD 1.6s ease-in-out 0s infinite;
+                                    }
+                                }
+                            }
+                            &.slot {
+                                .mainObject {
+                                    span {
+                                        animation: ifunD 1.6s ease-in-out 0s infinite;
+                                    }
+                                }
+                            }
+                        }
+                        @keyframes move {
+                            0% {
+                                transform: skew(2deg) translateY(0);
+                            }
+                            25% {
+                                transform: skew(0) translateY(3%);
+                            }
+                            75% {
+                                transform: skew(-2deg) translateY(0);
+                            }
+                            100% {
+                                transform: skew(0deg) translateY(0);
+                            }
+                        }
+                        @keyframes zoomI {
+                            0% {
+                                transform: scale(1.11);
+                            }
+                            100% {
+                                transform: scale(1);
+                            }
+                        }
+                        @keyframes shake {
+                            0% {
+                                transform: rotate(2deg);
+                            }
+                            50% {
+                                transform: rotate(-2deg);
+                            }
+                            100% {
+                                transform: rotate(0deg);
+                            }
+                        }
+                        @keyframes liveD {
+                            0% {
+                                transform: rotateZ(-20deg) translate(-50%,0%);
+                            }
+                            50% {
+                                transform: rotateZ(-10deg) translate(-90%,0%);
+                            }
+                            100% {
+                                transform: rotateZ(0deg) translate(-50%,-0%);
+                            }
+                        }
+                        @keyframes ifunD {
+                            0% {
+                                transform: rotateZ(0deg) translate(-50%,0%);
+                            }
+                            50% {
+                                transform: rotateZ(-10deg) translate(-50%,0%);
+                            }
+                            100% {
+                                transform: rotateZ(0deg) translate(-50%,-0%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 1610px) {
+        .gameType {
+            .top {
+                li {
+                    p {
+                        &.ori {
+                            display: none;
+                        }
+                        &.media {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 1425px) {
+        .ad {
+            width: calc(100% - 100px);
+        }
+    }
+    @media only screen and (max-width: 1254px) {
+        .gameType {
+            .top {
+                li {
+                    p {
+                        font-size: 15px;
+                        white-space: pre;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 1020px) {
+        .gameType {
+            .bottom {
+                display: none;
+            }
+
+            .gtswiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        .gameBlock {
+                            .clipBG {
+                                .mainObject {
+                                    height: 280px;
+                                }
+                            }
+
+                            .toplayer {
+                                p {
+                                    font-size: 12px;
+                                    bottom: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

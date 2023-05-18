@@ -1,0 +1,122 @@
+//fontColor
+$mainFont: #ffffff;
+$footerFont: #b7b7b7;
+$gameType_Font: #6e2222;
+$gameNAME: #ffea96;
+$remind: #37adff;
+
+//border
+$border_01: #7c7c7c;
+$border_02: #404040;
+$border_03: #ffffff;
+
+//header
+$logoBG: #7b0303;
+$logoHOV_shadow: #ffffff79;
+$labelDecoBG: linear-gradient(to bottom, #c99f55 0%, #ebc980 100%);
+$lang_arrow: #a38b61;
+$nav_ACT: #aa0808;
+
+@mixin headerInput {
+    background: #e0e0e0;
+    border-radius: 0 20px 0 0;
+    border: 1px solid #f5f5f5;
+    box-shadow: inset 0px 0px 4px #1919193a,
+                inset 0px 0px 4px #1919193a;
+    color: #7b0303;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@mixin lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #242424 0%, #2f2f2f 100%);
+    border: 1px solid #a38b61;
+    color: #ffffff;
+
+    &:hover,&:active,&.active {
+        background: #c19548;
+        border-color: #f5f5f5;
+        p {
+            span {
+                &::before,
+                &::after {
+                    background: #f5f5f5;
+                }
+            }
+        }
+    }
+}
+
+//ad
+$nextPrevBtn: #eceae0;
+$nextPrev_icon:#191919;
+
+//mq
+$mqTitle: #272727;
+$mqBG: linear-gradient(to top, #c99f55 0%, #ebc980 100%);
+$textBoxBG: #f7f7f7;
+$mqDeco: linear-gradient(to top, #c99f55 0%, #ebc980 100%);
+$mqShadaw: #00000079;
+
+//mainWrap
+
+
+//footer
+$gcBTN_BG: #bcbcbc;
+$gcBTN_HOV_BG: #ffffff;
+$midTitle_deco: #c8a364;
+$footerNav_BG: linear-gradient(to left, transparent 0%, #0f0f0f 50%, transparent 100%);
+$footerNavHOV_BG: linear-gradient(to left, transparent 0%, #a27d3e 50%, transparent 100%);
+
+//常用BTN
+
+@mixin mainBtn {
+    background: linear-gradient(to top, #ebc980 0%, #c69b63 20%, #ebc980 77%);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+
+    &:hover,&:active,&.active {
+        background: #bb8947;
+        border-color: #f5f5f5;
+        color: #ffffff;
+    }
+}
+
+@mixin subBtn {
+    background: linear-gradient(to top, #930606 0%, #c20e0e 92%);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+
+    &:hover,&:active,&.active {
+        background: #7e0404;
+        border-color: #f5f5f5;
+        color: #ffffff;
+    }
+}
+
+@mixin blackGold_Btn {
+    background: linear-gradient(to top, #141414 0%, #1e1e1e 100%);
+    border: 1px solid #f8e191;
+    color: #e9bd71;
+    font-size: 18px;
+    font-weight: bold;
+
+    &:hover,&:active,&.active {
+        background: #c19548;
+        border: 2px solid #f5f5f5;
+        color: #ffffff;
+    }
+}
+
+//bg_Obj
+$circle_gold: #d3ab62;
+$circle_gray: #6f6f6f;

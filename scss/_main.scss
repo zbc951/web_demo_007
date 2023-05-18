@@ -1,0 +1,186 @@
+html {
+    width: 100%;
+    min-width: 1000px;
+    height: auto;
+    position: relative;
+
+    body {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        // &::-webkit-scrollbar {
+        //     width: 0;
+        // }
+
+        .bcenter {
+            width: 1400px;
+            height: auto;
+        }
+
+        .bg {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -999;
+
+            span {
+                border-radius: 500px;
+                position: absolute;
+
+                &.gold {
+                    width: 215px;
+                    height: 215px;
+                    background: transparent;
+                    border: 3px solid $circle_gold;
+                    position: fixed;
+                    top: 675px;
+                    left: 176px;
+                    animation: ripple 4s ease-in infinite;
+
+                    &::before {
+                        content: "";
+                        width: 180px;
+                        height: 180px;
+                        display: block;
+                        border-radius: 500px;
+                        background: transparent;
+                        border: 1px solid $circle_gold;
+                        position: absolute;
+                        top: -67px;
+                        left: -73px;
+                        animation: ripple 4s 4s ease-in infinite;
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 180px;
+                        height: 180px;
+                        display: block;
+                        border-radius: 500px;
+                        background: transparent;
+                        border: 1px solid $circle_gold;
+                        position: absolute;
+                        top: 149px;
+                        left: -42px;
+                        animation: ripple 3s 2s ease-in infinite;
+                    }
+                }
+                &.gray {
+                    width: 300px;
+                    height: 300px;
+                    background: transparent;
+                    border: 3px solid $circle_gray;
+                    position: fixed;
+                    top: -66px;
+                    right: 269px;
+                    animation: ripple 6s ease-in infinite;
+
+                    &::before {
+                        content: "";
+                        width: 431px;
+                        height: 431px;
+                        display: block;
+                        border-radius: 500px;
+                        background: transparent;
+                        border: 1px solid $circle_gray;
+                        position: fixed;
+                        top: -18px;
+                        left: 146px;
+                        animation: ripple 5s 5s ease-in infinite;
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 180px;
+                        height: 180px;
+                        display: block;
+                        border-radius: 500px;
+                        background: transparent;
+                        border: 1px solid $circle_gray;
+                        position: absolute;
+                        top: 169px;
+                        left: 230px;
+                        animation: ripple 4.5s 2s ease-in infinite;
+                    }
+                }
+
+                @keyframes ripple {
+                    0% {
+                        transform: scale(0.2); 
+                        opacity: 0;
+                    }
+                    50% {
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: scale(1); 
+                        opacity: 0;
+                    }
+                }
+            }
+
+            i {
+                width: 60px;
+                height: 60px;
+                border: 0.1px solid $circle_gray;
+                border-radius: 50px;
+                pointer-events: none;
+                user-select: none;
+                position: absolute;
+                animation: rFade 2s linear;
+                opacity: 0;
+
+                @keyframes rFade {
+                    0% {
+                        opacity: 0;
+                        transform: translate(-50%,-50%) scale(0);
+                    }
+                    30% {
+                        opacity: 1;
+                        transform: translate(-50%,-50%);
+                    }
+                    100% {
+                        opacity: 0;
+                        transform: translate(-50%,-50%) scale(300%);
+                    }
+                }
+            }
+            freeze {
+                width: 60px;
+                height: 60px;
+                border: 0.1px solid $circle_gold;
+                border-radius: 50px;
+                pointer-events: none;
+                user-select: none;
+                position: absolute;
+                animation: rFade 2s linear;
+                opacity: 0;
+
+                @keyframes rFade {
+                    0% {
+                        opacity: 0;
+                        transform: translate(-50%,-50%) scale(0);
+                    }
+                    30% {
+                        opacity: 1;
+                        transform: translate(-50%,-50%);
+                    }
+                    100% {
+                        opacity: 0;
+                        transform: translate(-50%,-50%) scale(300%);
+                    }
+                }
+            }
+        }
+    }
+
+    @import "./_header";
+    @import "./_mainWrap";
+    @import "./_footer";
+}
